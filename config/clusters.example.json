@@ -1,0 +1,36 @@
+{
+  "clusters": [
+    {
+      "cluster_name": "payments-prod",
+      "environment": "production",
+      "aws_account": "123456789012",
+      "region": "us-east-1",
+      "kconnect_context": "payments-prod",
+      "expected_kube_context": "payments-prod",
+      "service_account": "eks-sre-readonly",
+      "namespace": "payments",
+      "team": "payments-sre",
+      "owners": ["payments-platform"],
+      "email_recipients": ["payments-sre@example.com"],
+      "nodegroups": ["payments-ng"],
+      "tags": {
+        "criticality": "tier-1"
+      }
+    },
+    {
+      "cluster_name": "orders-nonprod",
+      "environment": "nonproduction",
+      "aws_account": "123456789012",
+      "region": "us-east-1",
+      "kconnect_context": "orders-nonprod",
+      "expected_kube_context": "orders-nonprod",
+      "service_account": "eks-sre-readonly",
+      "namespace": "orders",
+      "team": "orders",
+      "owners": ["orders-platform"],
+      "email_recipients": ["orders@example.com"],
+      "nodegroups": [],
+      "tags": {}
+    }
+  ]
+}

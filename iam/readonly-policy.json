@@ -1,0 +1,26 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "EKSRead",
+      "Effect": "Allow",
+      "Action": ["eks:DescribeCluster","eks:ListNodegroups","eks:DescribeNodegroup","eks:ListAddons","eks:DescribeAddon"],
+      "Resource": "*"
+    },
+    {
+      "Sid": "InfrastructureRead",
+      "Effect": "Allow",
+      "Action": [
+        "ec2:Describe*",
+        "autoscaling:Describe*",
+        "elasticloadbalancing:Describe*",
+        "cloudwatch:DescribeAlarms",
+        "cloudwatch:GetMetricData",
+        "cloudwatch:GetMetricStatistics",
+        "cloudwatch:ListMetrics",
+        "sts:GetCallerIdentity"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
